@@ -1,0 +1,9 @@
+@startuml
+
+Animal <|-- Cat
+
+"Producer<Animal>" <|-- "Producer<Cat>"
+
+"Consumer<Cat>" <|-- "Consumer<Animal>"
+
+@enduml

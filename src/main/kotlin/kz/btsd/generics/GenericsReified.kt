@@ -2,11 +2,11 @@ package kz.btsd.generics
 
 fun main(args: Array<String>) {
     val col = listOf("1", "2")
-    // col is Set<Int> // compile time error
+//    col is Set<Int> // compile time error
     col is Set<*> // Java Set<?>
     printSum(listOf(1, 2))
-    // printSum(setOf(1, 2))
-    // printSum(listOf("1", "2"))
+//    printSum(setOf(1, 2))
+//    printSum(listOf("1", "2"))
 
     println(isType<String>("1"))
     println(isType<String>(1))
@@ -19,7 +19,7 @@ fun printSum(c: Collection<*>) {
     println(intList.sum())
 }
 
-// fun <T> isType(value: Any): Boolean = value is T // compile time error
+//fun <T> isType(value: Any): Boolean = value is T // compile time error
 
 inline fun <reified T> isType(value: Any): Boolean = value is T
 

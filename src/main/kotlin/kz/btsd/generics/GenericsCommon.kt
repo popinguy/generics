@@ -4,10 +4,12 @@ val list1 = listOf<String>()
 val list2: List<String> = listOf()
 val list3 = listOf("John", "Jack")
 val list4 = mutableListOf("John", "Jack")
-// val list4 = listOf() // compile time error
+//val list5 = listOf() // compile time error
+//backward compatibility - raw types
 
-fun <T> createTask(): T {
+fun <T, K> createTask(): T {
     val list = listOf<T>()
+    val list2 = listOf<K>()
     TODO()
 }
 
@@ -28,13 +30,16 @@ class Worker<Task, Result> {
 }
 
 // type parameter constraints
-fun <T : Number> List<T>.sumNumbers(): T {
+fun <T : Number> List<T>.sumNumbers(): List<T> {
     TODO()
 }
 
 fun <T : Comparable<T>> max(first: T, second: T) {
     TODO()
 }
+//Java - extends
+
+//String : Comparable<String>
 
 fun <T> ensureTrailingPeriod(seq: T) where T : CharSequence, T : Appendable {
     if (!seq.endsWith('.')) {

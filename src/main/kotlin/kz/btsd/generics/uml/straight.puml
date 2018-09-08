@@ -1,0 +1,13 @@
+@startuml
+
+A <|-- B
+
+Number <|-- Int
+
+Int <|--- Int
+
+String <|-- Int
+
+abstract class Number
+
+@enduml

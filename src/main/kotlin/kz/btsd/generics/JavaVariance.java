@@ -35,7 +35,7 @@ public class JavaVariance<T extends List<CharSequence>> {
     private static void doNothing3(A<? super CharSequence> arg) {
     }
 
-    static class A<T> {
+    static class A<T extends Object> {
         void doNothing(T arg) {
         }
     }

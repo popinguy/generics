@@ -1,0 +1,7 @@
+@startuml
+
+"A?" <|-- A
+"Int?" <|-- Int
+Int <|-- "Int?"
+
+@enduml
